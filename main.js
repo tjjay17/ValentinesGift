@@ -8,6 +8,7 @@ let thirdheart = document.getElementById('option2');
 let correctOption = document.getElementById('option'+ random);
 let wrongOptions = [];
 let isOpened = false;
+let letter = document.getElementById('loveLetter');
 
 for(let i = 0; i<3; i++){
     if(random !== i.toString()){
@@ -19,6 +20,9 @@ for(let j = 0; j<wrongOptions.length;j++){
     let wrong = document.getElementById('option' + wrongOptions[j].toString());
     wrong.onclick = () =>{
         prompt.innerHTML = 'No Dummy! Try Again';
+        setTimeout(() =>{
+            prompt.innerHTML = 'Select The Right Heart...';
+        },1200);
     }
 }
 
@@ -27,10 +31,15 @@ correctOption.onclick = () =>{
     topflap.style.transform = 'rotate(180deg)';
     topflap.style.position = 'relative';
     topflap.style.top = '20vh';
-
     isOpened = true;
+    letter.style.display = 'inline-block';
+    setTimeout(() =>{
+        letter.style.transform = 'translateY(-120px)';
+    },1000);
+    
 }
 
-console.log(random);
-
+let afterRight = (
+    "<div id = 'bigHeart'> </div>"
+);
 
