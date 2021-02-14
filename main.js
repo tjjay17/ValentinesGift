@@ -45,7 +45,7 @@ correctOption.onclick = () =>{
         fullbody.append(pic1);
         pic1.scrollIntoView({behavior:'smooth'});
         
-    },2300);
+    },2800);
 }
 
 
