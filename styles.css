@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+@keyframes animateHeart{
+    0%{
+        transform: scale(0.8);
+    }
+
+    10%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(0.8)
+    }
+
+    50%{
+        transform:scale(1);
+    }
+
+    100%{
+        transform:scale(0.8);
+    }
+}
+
+@keyframes opacityLoad{
+    0%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes rainbowText{
+    0%{
+        color:pink;
+    }
+
+    25%{
+        color:red;
+    }
+
+    50%{
+        color:pink;
+    }
+
+    75%{
+        color:red;
+    }
+
+    100%{
+        color:pink;
+    }
+}
+
+#homePage{
+    height:100vh;
+    width:100vw;
+    background-color:white;
+    animation: opacityLoad 1s;
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+}
+
+#gamePrompt{
+    font-family: 'Lovers Quarrel', cursive;
+    font-size: 6vw;
+    letter-spacing: 2vw;
+    text-align: center;
+    white-space: nowrap;
+    height:150px;
+    /* margin-bottom: 2vh; */
+}
+
+.heart{
+    background-color:white;
+    height:100px;
+    width:100px;
+    margin:10vh auto;
+    position: relative;
+    animation:animateHeart 1.2s infinite;
+    cursor: pointer;
+}
+
+.heart::before,.heart::after{
+    content:"";
+    position: absolute;
+    background-color: pink;
+    width:45px;
+    height:70px;
+    top:0;
+    border-radius:50px 50px 0 0;
+}
+
+.heart::before{
+    transform: rotate(-45deg);
+    left:17px;
+}
+
+.heart::after{
+    transform: rotate(45deg);
+    right:20px;
+}
+
+#hearts{
+    display: flex;
+    flex-direction: column;
+}
+
+#envelope{
+    height:0;
+    width:0;
+    margin:10vh auto;
+    border-top:2px transparent;
+    /* box-shadow: 0px 3px 8px 2px #ccc; */
+    position:relative;
+    top:10vh;
+    /* border-top: 100px solid white;
+    border-bottom: 100px solid #B51A3A;
+    border-right: 200px solid #B51A3A;
+    border-left: 200px solid #B51A3A; */
+    border-top: 10vh solid white;
+    border-bottom: 10vh solid #B51A3A;
+    border-right: 20vh solid #B51A3A;
+    border-left: 20vh solid #B51A3A;
+    cursor: pointer;
+    z-index:10;
+}
+
+#topFlap{
+    height: 0;
+    width: 0;
+    position:relative;
+    top:39.5vh;
+    border-top:10vh solid #B51A3A;
+    border-bottom:10vh solid transparent;
+    border-right:20vh solid transparent;
+    border-left:20vh solid transparent;
+    z-index:20;
+}
+
+#letter{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom:30vh;
+    height:100%;
+}
+
+#gameHearts{
+    margin:0 auto;
+    width: 100vw;
+    margin-top: -10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow-y: hidden;
+}
+
+@media only screen and (max-width:500px){
+    #gamePrompt{
+        font-size: 7vw;
+    }
+}
+
+
+@media only screen and (max-width:400px){
+    #gamePrompt{
+        font-size: 8vw;
+    }
+}
+
+
+
+
