@@ -76,7 +76,7 @@
     font-size: 6vw;
     letter-spacing: 2vw;
     text-align: center;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     height:150px;
     transition: display 2s;
     /* margin-bottom: 2vh; */
@@ -173,19 +173,18 @@
 #loveLetter{
     height:200px;
     width:180px;
-    background-color: black;
+    background-color: pink;
     z-index: 1000;
     height:8vh;
     position: relative;
     bottom:18vh;
-    transition:transform 1s;
-    display: none;
+    transition:transform 2s, opacity 2s;
+    opacity:0;
 }
 
 #loveLetter p{
     font-family: 'Ubuntu',sans-serif;
     text-align: center;
-    color: white;
     letter-spacing: 10px;
     font-size: 10px;
 }
@@ -201,6 +200,10 @@
     #gamePrompt{
         font-size: 8vw;
     }
+}
+
+.coupleImages{
+    margin:auto;
 }
 
 
