@@ -11,7 +11,7 @@ let isOpened = false;
 let letter = document.getElementById('loveLetter');
 let pic1 = document.createElement('img');
 pic1.src = './images/Pic5.png';
-pic1.className = 'coupleImages'
+pic1.className = 'coupleImages';
 
 for(let i = 0; i<3; i++){
     if(random !== i.toString()){
@@ -44,7 +44,6 @@ correctOption.onclick = () =>{
     setTimeout(() =>{
         fullbody.append(pic1);
         pic1.scrollIntoView({behavior:'smooth'});
-        
     },2800);
 }
 
