@@ -88,6 +88,7 @@
     margin:10vh auto;
     position: relative;
     animation:animateHeart 1.2s infinite;
+    z-index: 100;
     cursor: pointer;
 }
 
@@ -165,6 +166,7 @@
     flex-direction: row;
     justify-content: space-around;
     overflow-y: hidden;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:500px){
