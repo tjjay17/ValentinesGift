@@ -9,9 +9,7 @@ let correctOption = document.getElementById('option'+ random);
 let wrongOptions = [];
 let isOpened = false;
 let letter = document.getElementById('loveLetter');
-let pic1 = document.createElement('img');
-pic1.src = './images/Pic5.png';
-pic1.className = 'coupleImages';
+let card = document.getElementById('valentineCard');
 
 for(let i = 0; i<3; i++){
     if(random !== i.toString()){
@@ -40,11 +38,17 @@ correctOption.onclick = () =>{
     setTimeout(() =>{
         letter.style.transform = 'translateY(-120px)';
     },1000);
-
-    setTimeout(() =>{
-        fullbody.append(pic1);
-        pic1.scrollIntoView({behavior:'smooth'});
-    },2800);
 }
+
+card.onclick = () =>{
+    card.classList.toggle('flipped');
+    console.log('hi');
+}
+
+    // setTimeout(() =>{
+    //     fullbody.append(pic1);
+    //     pic1.scrollIntoView({behavior:'smooth'});
+    // },2800);
+
 
 
